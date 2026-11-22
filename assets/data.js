@@ -662,7 +662,7 @@ window.PORTAL = {
   {
    "grup": "Model BIM",
    "nama": "Model BIM R4.1 (IFC4)",
-   "ket": "32.568 elemen — BimCraft / Revit / Tekla",
+   "ket": "32.568 elemen — format IFC4 terbuka",
    "file": "files/model-bim-r4.1.ifc",
    "tipe": "IFC",
    "ukuran": "23,0 MB",
