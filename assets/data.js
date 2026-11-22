@@ -12,7 +12,7 @@ window.PORTAL = {
   "statusKet": "dokumen klien — sudah dibayar",
   "perencana": "Konsultan perencana struktur & BIM",
   "jumlahLembar": 41,
-  "totalUnduh": "43,4 MB"
+  "totalUnduh": "43,5 MB"
  },
  "sheets": [
   {
@@ -547,7 +547,7 @@ window.PORTAL = {
    "thumb": "preview/visual/vext-thumb.webp",
    "file": "files/visual-eksterior.jpg",
    "px": "1448 x 1086",
-   "ukuran": "545 KB"
+   "ukuran": "388 KB"
   },
   {
    "judul": "Interior workshop",
@@ -611,8 +611,8 @@ window.PORTAL = {
    "ket": "Harga satuan Jawa Tengah (eRABe)",
    "file": "files/rab-01-versi-a.xlsx",
    "tipe": "XLSX",
-   "ukuran": "20 KB",
-   "bytes": 20119
+   "ukuran": "124 KB",
+   "bytes": 126650
   },
   {
    "grup": "RAB",
@@ -629,8 +629,8 @@ window.PORTAL = {
    "ket": "Harga pasar Sragen",
    "file": "files/rab-01-versi-b.xlsx",
    "tipe": "XLSX",
-   "ukuran": "20 KB",
-   "bytes": 20050
+   "ukuran": "124 KB",
+   "bytes": 126970
   },
   {
    "grup": "RAB",
@@ -674,8 +674,8 @@ window.PORTAL = {
    "ket": "Render final",
    "file": "files/visual-eksterior.jpg",
    "tipe": "JPG",
-   "ukuran": "545 KB",
-   "bytes": 557861
+   "ukuran": "388 KB",
+   "bytes": 397211
   },
   {
    "grup": "Visual",
