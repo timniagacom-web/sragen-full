@@ -12,7 +12,7 @@ window.PORTAL = {
   "statusKet": "dokumen klien — sudah dibayar",
   "perencana": "Konsultan perencana struktur & BIM",
   "jumlahLembar": 41,
-  "totalUnduh": "43,5 MB"
+  "totalUnduh": "43,6 MB"
  },
  "sheets": [
   {
@@ -575,8 +575,8 @@ window.PORTAL = {
    "ket": "Siap cetak A3, lengkap",
    "file": "files/gambar-kerja-a3.pdf",
    "tipe": "PDF",
-   "ukuran": "17,0 MB",
-   "bytes": 17825954
+   "ukuran": "17,1 MB",
+   "bytes": 17962595
   },
   {
    "grup": "Gambar kerja",
@@ -585,7 +585,7 @@ window.PORTAL = {
    "file": "files/gambar-kerja-a3.dwg",
    "tipe": "DWG",
    "ukuran": "481 KB",
-   "bytes": 492246
+   "bytes": 492059
   },
   {
    "grup": "RAB",
