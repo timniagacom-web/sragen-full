@@ -12,7 +12,7 @@ window.PORTAL = {
   "statusKet": "dokumen klien — sudah dibayar",
   "perencana": "Konsultan perencana struktur & BIM",
   "jumlahLembar": 41,
-  "totalUnduh": "43,6 MB"
+  "totalUnduh": "44,1 MB"
  },
  "sheets": [
   {
@@ -508,6 +508,32 @@ window.PORTAL = {
    "n": 4
   },
   {
+   "kode": "RAB-01 GA",
+   "judul": "Khusus gudang — Versi A (eRABe)",
+   "ket": "Bangunan baja 18 x 60 m saja (tanpa kantor, toilet, kanopi, halaman, crane)",
+   "file": "files/rab-01-gudang-versi-a.pdf",
+   "ukuran": "146 KB",
+   "pages": [
+    "preview/laporan/rab-01-gudang-versi-a-1.webp",
+    "preview/laporan/rab-01-gudang-versi-a-2.webp",
+    "preview/laporan/rab-01-gudang-versi-a-3.webp"
+   ],
+   "n": 3
+  },
+  {
+   "kode": "RAB-01 GB",
+   "judul": "Khusus gudang — Versi B (pasar Sragen)",
+   "ket": "Bangunan baja 18 x 60 m saja (tanpa kantor, toilet, kanopi, halaman, crane)",
+   "file": "files/rab-01-gudang-versi-b.pdf",
+   "ukuran": "146 KB",
+   "pages": [
+    "preview/laporan/rab-01-gudang-versi-b-1.webp",
+    "preview/laporan/rab-01-gudang-versi-b-2.webp",
+    "preview/laporan/rab-01-gudang-versi-b-3.webp"
+   ],
+   "n": 3
+  },
+  {
    "kode": "STR-01",
    "judul": "Draf perhitungan struktur",
    "ket": "Beban SNI 1727:2020, kombinasi, cek penampang, simpangan, pondasi",
@@ -631,6 +657,42 @@ window.PORTAL = {
    "tipe": "XLSX",
    "ukuran": "124 KB",
    "bytes": 126970
+  },
+  {
+   "grup": "RAB",
+   "nama": "RAB-01 Khusus Gudang Versi A — rekap (PDF)",
+   "ket": "Bangunan baja 18 x 60 m saja",
+   "file": "files/rab-01-gudang-versi-a.pdf",
+   "tipe": "PDF",
+   "ukuran": "146 KB",
+   "bytes": 149426
+  },
+  {
+   "grup": "RAB",
+   "nama": "RAB-01 Khusus Gudang Versi A — Excel berformula",
+   "ket": "Bangunan baja 18 x 60 m saja",
+   "file": "files/rab-01-gudang-versi-a.xlsx",
+   "tipe": "XLSX",
+   "ukuran": "124 KB",
+   "bytes": 126775
+  },
+  {
+   "grup": "RAB",
+   "nama": "RAB-01 Khusus Gudang Versi B — rekap (PDF)",
+   "ket": "Bangunan baja 18 x 60 m saja",
+   "file": "files/rab-01-gudang-versi-b.pdf",
+   "tipe": "PDF",
+   "ukuran": "146 KB",
+   "bytes": 149343
+  },
+  {
+   "grup": "RAB",
+   "nama": "RAB-01 Khusus Gudang Versi B — Excel berformula",
+   "ket": "Bangunan baja 18 x 60 m saja",
+   "file": "files/rab-01-gudang-versi-b.xlsx",
+   "tipe": "XLSX",
+   "ukuran": "124 KB",
+   "bytes": 127098
   },
   {
    "grup": "RAB",
