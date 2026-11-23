@@ -6,19 +6,19 @@ window.PORTAL = {
   "noProyek": "GE/PNW/2026/11/015",
   "pemilik": "Kak Rozi",
   "lokasi": "Kejapanan, Gempol, Kab. Pasuruan, Jawa Timur",
-  "totalUnduh": "21,9 MB",
+  "totalUnduh": "11,0 MB",
   "statusList": [
    [
     "Gambar kerja",
-    "8 lembar"
+    "2 lembar"
    ],
    [
     "Nomor gambar",
-    "8"
+    "2"
    ],
    [
     "Dokumen",
-    "2 dokumen"
+    "3 dokumen"
    ],
    [
     "Model BIM",
@@ -55,9 +55,9 @@ window.PORTAL = {
     "ket": "Lt.1 + Lt.2"
    },
    {
-    "label": "Gambar kerja",
-    "nilai": "8 lembar",
-    "ket": "set A3 arsitektur & struktur"
+    "label": "Gambar",
+    "nilai": "2 lembar",
+    "ket": "denah & potongan A3"
    },
    {
     "label": "RAB Revisi 2",
@@ -96,15 +96,14 @@ window.PORTAL = {
    ]
   ],
   "perubahan": [],
-  "catatanUnduhan": "Dimensi dalam mm, elevasi dalam m terhadap peil ±0,00 lantai 1. Jangan mengukur dari gambar — baca bersama laporan struktur."
+  "catatanUnduhan": "Dimensi dalam mm, elevasi dalam m terhadap peil ±0,00 lantai 1. Jangan mengukur dari gambar."
  },
  "disiplin": [
-  "Arsitektur",
-  "Struktur"
+  "Arsitektur"
  ],
  "lembarUnduh": {
-  "file": "files/gambar-kerja-a3.pdf",
-  "label": "Unduh PDF A3 lengkap"
+  "file": "files/denah-potongan-a3.pdf",
+  "label": "Unduh PDF A3"
  },
  "sheets": [
   {
@@ -128,80 +127,14 @@ window.PORTAL = {
    "ket": "1:100",
    "img": "preview/lembar/ARS-02.webp",
    "thumb": "preview/lembar/ARS-02-thumb.webp"
-  },
-  {
-   "no": "ARS-03",
-   "base": "ARS-03",
-   "judul": "Tampak depan, belakang, samping kanan & kiri",
-   "halaman": 1,
-   "total": 1,
-   "disiplin": "Arsitektur",
-   "ket": "1:100",
-   "img": "preview/lembar/ARS-03.webp",
-   "thumb": "preview/lembar/ARS-03-thumb.webp"
-  },
-  {
-   "no": "ARS-04",
-   "base": "ARS-04",
-   "judul": "Denah atap & dak, detail teritis",
-   "halaman": 1,
-   "total": 1,
-   "disiplin": "Arsitektur",
-   "ket": "1:100, detail 1:50",
-   "img": "preview/lembar/ARS-04.webp",
-   "thumb": "preview/lembar/ARS-04-thumb.webp"
-  },
-  {
-   "no": "STR-01",
-   "base": "STR-01",
-   "judul": "Denah fondasi & sloof",
-   "halaman": 1,
-   "total": 1,
-   "disiplin": "Struktur",
-   "ket": "Tabel & catatan fondasi; 1:100",
-   "img": "preview/lembar/STR-01.webp",
-   "thumb": "preview/lembar/STR-01-thumb.webp"
-  },
-  {
-   "no": "STR-02",
-   "base": "STR-02",
-   "judul": "Kolom & balok lantai 2, kolom & balok dak",
-   "halaman": 1,
-   "total": 1,
-   "disiplin": "Struktur",
-   "ket": "1:100",
-   "img": "preview/lembar/STR-02.webp",
-   "thumb": "preview/lembar/STR-02-thumb.webp"
-  },
-  {
-   "no": "STR-03",
-   "base": "STR-03",
-   "judul": "Detail penulangan kolom, balok, pelat, fondasi",
-   "halaman": 1,
-   "total": 1,
-   "disiplin": "Struktur",
-   "ket": "Tabel tulangan & catatan pelaksanaan",
-   "img": "preview/lembar/STR-03.webp",
-   "thumb": "preview/lembar/STR-03-thumb.webp"
-  },
-  {
-   "no": "ARS-05",
-   "base": "ARS-05",
-   "judul": "Perspektif 3D — render fotorealistik",
-   "halaman": 1,
-   "total": 1,
-   "disiplin": "Arsitektur",
-   "ket": "NTS",
-   "img": "preview/lembar/ARS-05.webp",
-   "thumb": "preview/lembar/ARS-05-thumb.webp"
   }
  ],
  "laporan": [
   {
    "kode": "RAB Rev 2",
-   "judul": "Rencana anggaran biaya — Revisi 2",
-   "ket": "Rekap, perubahan dari revisi sebelumnya, dan item harga pasar; biaya pekerjaan tanpa pajak",
-   "file": "files/rab-rozi-rev2",
+   "judul": "RAB Revisi 2 — rekap",
+   "ket": "Rekap per kelompok pekerjaan, perubahan dari revisi sebelumnya, item harga pasar",
+   "file": "files/rab-rozi-rev2.pdf",
    "ukuran": "65 KB",
    "pages": [
     "preview/laporan/rab-rozi-rev2-1.webp",
@@ -211,10 +144,24 @@ window.PORTAL = {
    "n": 3
   },
   {
+   "kode": "RAB Rev 2 rinci",
+   "judul": "RAB Revisi 2 — rincian per item",
+   "ket": "145 item: uraian, lokasi, satuan, volume, harga satuan, jumlah, subtotal per kelompok",
+   "file": "files/rab-rozi-rev2-rincian.pdf",
+   "ukuran": "249 KB",
+   "pages": [
+    "preview/laporan/rab-rozi-rev2-rincian-1.webp",
+    "preview/laporan/rab-rozi-rev2-rincian-2.webp",
+    "preview/laporan/rab-rozi-rev2-rincian-3.webp",
+    "preview/laporan/rab-rozi-rev2-rincian-4.webp"
+   ],
+   "n": 4
+  },
+  {
    "kode": "STR-RPT-01",
    "judul": "Laporan perhitungan struktur Rev 1 (draf)",
    "ket": "Beban, analisis rangka, desain kolom/balok/pelat, fondasi",
-   "file": "files/laporan-struktur-rev1",
+   "file": "files/laporan-struktur-rev1.pdf",
    "ukuran": "453 KB",
    "pages": [
     "preview/laporan/laporan-struktur-rev1-1.webp",
@@ -235,56 +182,29 @@ window.PORTAL = {
  ],
  "visual": [
   {
-   "judul": "Perspektif utama dari jalan",
-   "ket": "Render fotorealistik, 3/4 depan",
-   "img": "preview/visual/v1.webp",
-   "thumb": "preview/visual/v1-thumb.webp",
-   "file": "files/render-01-perspektif-utama.png",
-   "px": "1600 x 1125",
-   "ukuran": "1,9 MB"
-  },
-  {
-   "judul": "Sudut jalan",
-   "ket": "Render fotorealistik, tampak dari sudut jalan",
-   "img": "preview/visual/v2.webp",
-   "thumb": "preview/visual/v2-thumb.webp",
-   "file": "files/render-02-sudut-jalan.png",
-   "px": "1600 x 1125",
-   "ukuran": "1,9 MB"
-  },
-  {
-   "judul": "Udara 3/4",
-   "ket": "Render fotorealistik, pandangan udara",
-   "img": "preview/visual/v3.webp",
-   "thumb": "preview/visual/v3-thumb.webp",
-   "file": "files/render-03-udara.png",
-   "px": "1600 x 1125",
-   "ukuran": "1,9 MB"
-  },
-  {
    "judul": "Tampak depan kiri",
    "ket": "Fasad Japandi, balkon di atas carport",
-   "img": "preview/visual/v4.webp",
-   "thumb": "preview/visual/v4-thumb.webp",
-   "file": "files/render-04-depan-kiri.png",
+   "img": "preview/visual/v1.webp",
+   "thumb": "preview/visual/v1-thumb.webp",
+   "file": "files/render-01-depan-kiri.png",
    "px": "1448 x 1086",
    "ukuran": "2,3 MB"
   },
   {
    "judul": "Tampak depan kanan",
    "ket": "Kanopi, kisi kayu, carport",
-   "img": "preview/visual/v5.webp",
-   "thumb": "preview/visual/v5-thumb.webp",
-   "file": "files/render-05-depan-kanan.png",
+   "img": "preview/visual/v2.webp",
+   "thumb": "preview/visual/v2-thumb.webp",
+   "file": "files/render-02-depan-kanan.png",
    "px": "1448 x 1086",
    "ukuran": "2,3 MB"
   },
   {
    "judul": "Aksonometri",
    "ket": "Pandangan aksonometri bangunan",
-   "img": "preview/visual/v6.webp",
-   "thumb": "preview/visual/v6-thumb.webp",
-   "file": "files/render-06-aksonometri.png",
+   "img": "preview/visual/v3.webp",
+   "thumb": "preview/visual/v3-thumb.webp",
+   "file": "files/render-03-aksonometri.png",
    "px": "1585 x 992",
    "ukuran": "2,9 MB"
   }
@@ -292,48 +212,48 @@ window.PORTAL = {
  "unduhan": [
   {
    "grup": "Gambar kerja",
-   "nama": "Gambar kerja A3 — 8 lembar",
-   "ket": "Siap cetak A3, lengkap",
-   "file": "files/gambar-kerja-a3.pdf",
+   "nama": "Denah & potongan A3 — 2 lembar",
+   "ket": "Siap cetak A3",
+   "file": "files/denah-potongan-a3.pdf",
    "tipe": "PDF",
-   "ukuran": "5,2 MB",
-   "bytes": 5401268,
+   "ukuran": "1,2 MB",
+   "bytes": 1228104,
    "cepat": true
   },
   {
    "grup": "Gambar kerja",
-   "nama": "Gambar kerja A3 — sumber CAD (DWG)",
+   "nama": "Denah & potongan A3 — sumber CAD (DWG)",
    "ket": "Untuk editan / gambar pelaksanaan",
-   "file": "files/gambar-kerja-a3.dwg",
+   "file": "files/denah-potongan-a3.dwg",
    "tipe": "DWG",
-   "ukuran": "183 KB",
-   "bytes": 187389,
+   "ukuran": "110 KB",
+   "bytes": 112749,
    "cepat": false
   },
   {
    "grup": "Gambar kerja",
-   "nama": "Gambar kerja A3 — sumber CAD (DXF)",
+   "nama": "Denah & potongan A3 — sumber CAD (DXF)",
    "ket": "Format terbuka, untuk aplikasi CAD lain",
-   "file": "files/gambar-kerja-a3.dxf",
+   "file": "files/denah-potongan-a3.dxf",
    "tipe": "DXF",
-   "ukuran": "1,0 MB",
-   "bytes": 1099263,
+   "ukuran": "604 KB",
+   "bytes": 618220,
    "cepat": false
   },
   {
    "grup": "RAB",
    "nama": "RAB Revisi 2 — rekap (PDF)",
-   "ket": "Rekap, perubahan dari revisi sebelumnya, dan item harga pasar; biaya pekerjaan tanpa pajak",
-   "file": "files/rab-rozi-rev2",
-   "tipe": "",
+   "ket": "Rekap per kelompok pekerjaan, perubahan dari revisi sebelumnya, item harga pasar",
+   "file": "files/rab-rozi-rev2.pdf",
+   "tipe": "PDF",
    "ukuran": "65 KB",
    "bytes": 66509,
-   "cepat": true
+   "cepat": false
   },
   {
    "grup": "RAB",
-   "nama": "RAB Revisi 2 — Excel",
-   "ket": "Rekap, perubahan dari revisi sebelumnya, dan item harga pasar; biaya pekerjaan tanpa pajak",
+   "nama": "RAB Revisi 2 — Excel (rekap & rincian)",
+   "ket": "Rekap per kelompok pekerjaan, perubahan dari revisi sebelumnya, item harga pasar",
    "file": "files/rab-rozi-ge-pnw-2026-11-015-rev2.xlsx",
    "tipe": "XLSX",
    "ukuran": "24 KB",
@@ -341,17 +261,27 @@ window.PORTAL = {
    "cepat": false
   },
   {
+   "grup": "RAB",
+   "nama": "RAB Revisi 2 — rincian per item (PDF)",
+   "ket": "145 item: uraian, lokasi, satuan, volume, harga satuan, jumlah, subtotal per kelompok",
+   "file": "files/rab-rozi-rev2-rincian.pdf",
+   "tipe": "PDF",
+   "ukuran": "249 KB",
+   "bytes": 255440,
+   "cepat": true
+  },
+  {
    "grup": "Laporan",
    "nama": "STR-RPT-01 — Laporan perhitungan struktur Rev 1 (draf)",
    "ket": "Beban, analisis rangka, desain kolom/balok/pelat, fondasi",
-   "file": "files/laporan-struktur-rev1",
-   "tipe": "",
+   "file": "files/laporan-struktur-rev1.pdf",
+   "tipe": "PDF",
    "ukuran": "453 KB",
    "bytes": 463541,
    "cepat": true
   },
   {
-   "grup": "Model BIM & 3D",
+   "grup": "Model BIM",
    "nama": "Model BIM (IFC)",
    "ket": "Format IFC terbuka — buka dengan viewer BIM",
    "file": "files/model-bim-rozi.ifc",
@@ -361,50 +291,10 @@ window.PORTAL = {
    "cepat": true
   },
   {
-   "grup": "Model BIM & 3D",
-   "nama": "Model 3D (GLB)",
-   "ket": "Model visual Japandi — buka di viewer 3D / browser",
-   "file": "files/model-3d-rozi.glb",
-   "tipe": "GLB",
-   "ukuran": "937 KB",
-   "bytes": 959344,
-   "cepat": false
-  },
-  {
-   "grup": "Visual",
-   "nama": "Visual — Perspektif utama dari jalan",
-   "ket": "Render fotorealistik, 3/4 depan",
-   "file": "files/render-01-perspektif-utama.png",
-   "tipe": "PNG",
-   "ukuran": "1,9 MB",
-   "bytes": 1949384,
-   "cepat": false
-  },
-  {
-   "grup": "Visual",
-   "nama": "Visual — Sudut jalan",
-   "ket": "Render fotorealistik, tampak dari sudut jalan",
-   "file": "files/render-02-sudut-jalan.png",
-   "tipe": "PNG",
-   "ukuran": "1,9 MB",
-   "bytes": 1965331,
-   "cepat": false
-  },
-  {
-   "grup": "Visual",
-   "nama": "Visual — Udara 3/4",
-   "ket": "Render fotorealistik, pandangan udara",
-   "file": "files/render-03-udara.png",
-   "tipe": "PNG",
-   "ukuran": "1,9 MB",
-   "bytes": 2021615,
-   "cepat": false
-  },
-  {
    "grup": "Visual",
    "nama": "Visual — Tampak depan kiri",
    "ket": "Fasad Japandi, balkon di atas carport",
-   "file": "files/render-04-depan-kiri.png",
+   "file": "files/render-01-depan-kiri.png",
    "tipe": "PNG",
    "ukuran": "2,3 MB",
    "bytes": 2448252,
@@ -414,7 +304,7 @@ window.PORTAL = {
    "grup": "Visual",
    "nama": "Visual — Tampak depan kanan",
    "ket": "Kanopi, kisi kayu, carport",
-   "file": "files/render-05-depan-kanan.png",
+   "file": "files/render-02-depan-kanan.png",
    "tipe": "PNG",
    "ukuran": "2,3 MB",
    "bytes": 2461868,
@@ -424,7 +314,7 @@ window.PORTAL = {
    "grup": "Visual",
    "nama": "Visual — Aksonometri",
    "ket": "Pandangan aksonometri bangunan",
-   "file": "files/render-06-aksonometri.png",
+   "file": "files/render-03-aksonometri.png",
    "tipe": "PNG",
    "ukuran": "2,9 MB",
    "bytes": 3008699,
