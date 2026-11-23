@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Ruang tinjau — Rumah Rozi 8×12 · Gambar.Express</title>
+<link rel="stylesheet" href="assets/portal.css">
+</head>
+<body>
+<header class="top">
+  <div class="topbar">
+    <span class="brand"><span class="mark"></span>Ruang tinjau</span>
+    <button class="menu-btn" id="menuBtn" type="button">☰ Menu</button>
+    <div class="top-right">
+      <span class="top-status" id="topStatus">Pratinjau klien · draf</span>
+      <span class="owner"><span class="avatar">KR</span><span id="ownerName">Kak Rozi</span></span>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+</header>
+
+<div id="menuPanel"></div>
+
+<div class="toolbar">
+  <label class="search"><input id="searchInput" type="search" placeholder="Cari judul atau nomor lembar"></label>
+  <span class="count" id="count"></span>
+</div>
+
+<main>
+  <div class="hero">
+    <div>
+      <h1>Rumah Rozi 8×12<span class="dot">.</span></h1>
+      <div class="sub" id="heroSub"></div>
+    </div>
+    <div class="meta">
+      <span>TERBIT TERAKHIR</span>
+      <strong id="heroDate"></strong>
+      <span id="heroCode"></span>
+    </div>
+  </div>
+
+  <div class="banner">
+    Seluruh halaman diberi watermark <b>DRAF · gambarexpress.id</b> dan hanya dapat dilihat di portal ini.
+    Berkas asli (DWG, XLSX, PDF) dikirim via Google Drive setelah pemeriksaan dan persetujuan.
+    Gambar berstatus <b>koordinasi</b> — bukan untuk konstruksi.
+  </div>
+
+  <div id="groups"></div>
+</main>
+
+<footer class="foot">
+  Gambar.Express · Perencana &amp; Jasa Gambar Arsitektur · GE/PNW/2026/11/015 ·
+  Pratinjau ini tidak menyediakan unduhan berkas asli.
+</footer>
+
+<div id="lb">
+  <div class="lb-top">
+    <span class="lb-title" id="lbTitle"></span>
+    <div class="lb-actions">
+      <button id="lbPrev" type="button">‹ Sebelumnya</button>
+      <button id="lbNext" type="button">Berikutnya ›</button>
+      <button id="lbClose" type="button">Tutup</button>
+    </div>
+  </div>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" alt="" draggable="false"></div>
+  <div class="lb-wm" id="lbWm"></div>
+</div>
+
+<div id="blackout"><div><strong>Pratinjau disamarkan</strong>
+Kembali ke jendela ini untuk melanjutkan. Tangkapan layar dan pengunduhan tidak diizinkan.</div></div>
+
+<script>window.PORTAL = {"brand": "Ruang tinjau", "owner": "Kak Rozi", "project": "Rumah Rozi 8×12", "subtitle": "Rumah tinggal 2 lantai · 8 × 12 m · Kejapanan, Gempol, Pasuruan", "code": "GE/PNW/2026/11/015", "date": "23 November 2026", "status": "pratinjau klien · draf", "watermark": "DRAF · GAMBAR EXPRESS · GE/PNW/2026/11/015", "groups": [{"title": "Visual 3D", "items": [{"code": "VIS-01", "title": "Render fotorealistik — tampak depan kiri", "img": "pages/vis_01.webp", "note": "render v3", "w": 1448, "h": 1086}, {"code": "VIS-02", "title": "Render fotorealistik — tampak depan kanan", "img": "pages/vis_02.webp", "note": "render v3", "w": 1448, "h": 1086}, {"code": "VIS-03", "title": "Render fotorealistik — aksonometri", "img": "pages/vis_03.webp", "note": "render v3", "w": 1500, "h": 939}]}, {"title": "Gambar kerja", "items": [{"code": "ars-01", "title": "Perspektif 3D — render fotorealistik", "img": "pages/ars_01.webp", "note": "draf", "w": 1500, "h": 1061}, {"code": "ars-02", "title": "Denah Lantai 1 & 2", "img": "pages/ars_02.webp", "note": "draf", "w": 1500, "h": 1061}, {"code": "ars-03", "title": "Potongan A-A & B-B", "img": "pages/ars_03.webp", "note": "draf", "w": 1500, "h": 1061}]}, {"title": "RAB & kuantitas", "items": [{"code": "rab-01", "title": "Rekap RAB & catatan", "img": "pages/rab_01.webp", "note": "draf", "w": 1500, "h": 2122}]}, {"title": "Laporan", "items": [{"code": "str-01", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 1", "img": "pages/str_01.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-02", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 2", "img": "pages/str_02.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-03", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 3", "img": "pages/str_03.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-04", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 4", "img": "pages/str_04.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-05", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 5", "img": "pages/str_05.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-06", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 6", "img": "pages/str_06.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-07", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 7", "img": "pages/str_07.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-08", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 8", "img": "pages/str_08.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-09", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 9", "img": "pages/str_09.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-10", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 10", "img": "pages/str_10.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-11", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 11", "img": "pages/str_11.webp", "note": "draf", "w": 1500, "h": 2123}, {"code": "str-12", "title": "GE-STR-RPT-01_Laporan_Struktur_Rozi_Rev1 — halaman 12", "img": "pages/str_12.webp", "note": "draf", "w": 1500, "h": 2123}]}]};</script>
+<script src="assets/portal.js"></script>
+</body>
+</html>
