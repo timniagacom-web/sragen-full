@@ -1,0 +1,18 @@
+GUDANG / WORKSHOP SRAGEN - REVISI 1 (25-11-2026)
+Acuan: Revisi 0 = paket R4 terkirim 22-11-2026.
+
+Permintaan owner (24-11-2026): lahan bekas sawah ditimbun 1 m, pondasi batu kali di bawah sloof, cakar ayam di setiap kolom.
+
+Perubahan:
+1. Pondasi telapak (cakar ayam) tetap ada di setiap kolom, diturunkan ke tanah asli: dasar -2,000 (Rev 0: -1,000); ukuran telapak dihitung ulang.
+2. Pedestal 550x450 menerus dari atas telapak sampai lantai (tinggi +/-1,85 m), tulangan tetap.
+3. Pondasi batu kali 1:5 di bawah sloof dinding keliling (atas 300, bawah 700) - sekaligus menahan timbunan di batas tanah.
+4. Struktur baja, atap, talang, dinding dan arsitektur tidak berubah.
+
+Isi paket:
+01 Gambar Kerja  - set A3 Revisi 1 (PDF + DXF), 43 lembar
+02 Perhitungan   - STR-01 Lampiran Revisi 1 (telapak, pedestal, stabilitas batu kali)
+03 RAB Tambahan  - RAB-02 Tambahan Revisi 1 (terpisah dari RAB-01, tinggal ditambahkan)
+   Tambahan termasuk PPN: Versi A Rp 381.963.000 | Versi B Rp 376.394.000
+
+Perlu dikonfirmasi: sondir min. 4 titik dan pengukuran elevasi muka sawah/jalan sebelum pekerjaan pondasi.

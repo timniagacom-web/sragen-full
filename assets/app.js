@@ -1,4 +1,4 @@
-/* Web preview klien — Gudang / Workshop Sragen R4
+/* Portal dokumen klien (mode full) — Kit Portal Klien
    Semua isi berasal dari assets/data.js (dibuat oleh build.py). Tanpa dependensi. */
 (function () {
   'use strict';
@@ -15,25 +15,39 @@
   const ICON_DL = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M12 3v11"/><path d="m7 10 5 5 5-5"/><path d="M4 20h16"/></svg>';
   const ICON_EYE = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="2.6"/></svg>';
 
-  const DISC_ORDER = ['Umum', 'Arsitektur', 'Struktur', 'Plumbing'];
+  const DISC_ORDER = D.disiplin || [];
   const state = { disc: 'Semua' };
 
   /* ------------------------------------------------------------------ status ringkas */
   function renderStatus() {
+    const M = D.meta;
     const list = $('#statusList');
-    if (!list) return;
-    const nomor = new Set(D.sheets.map((s) => s.base)).size;
-    const ifc = D.unduhan.find((u) => u.file.endsWith('.ifc'));
-    list.innerHTML = [
-      ['Gambar kerja A3', `${D.sheets.length} lembar`],
-      ['Nomor gambar', String(nomor)],
-      ['Laporan', `${D.laporan.length} dokumen`],
-      ['Model BIM', ifc ? 'IFC4 · 32.568 elemen' : '—'],
-    ].map(([k, v]) => `<li><span>${esc(k)}</span><b>${esc(v)}</b></li>`).join('');
+    if (list) list.innerHTML = (M.statusList || []).map(([k, v]) => `<li><span>${esc(k)}</span><b>${esc(v)}</b></li>`).join('');
     const dl = $('#dlSummary');
-    if (dl) dl.textContent = `${D.unduhan.length} berkas · total ${D.meta.totalUnduh} · semua tautan di bawah.`;
-    const tot = $('#totalUnduh');
-    if (tot) tot.textContent = D.meta.totalUnduh;
+    if (dl) dl.textContent = `${D.unduhan.length} berkas · total ${M.totalUnduh} · semua tautan di bawah.`;
+    $('#metaList').innerHTML = (M.metaList || []).map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('');
+    const cta = [];
+    if (D.sheets.length) cta.push(`<a class="btn btn-primary" href="#gambar">Lihat gambar kerja (${D.sheets.length} lembar)</a>`);
+    if (D.lembarUnduh) cta.push(`<a class="btn btn-ghost" href="${esc(D.lembarUnduh.file)}" download>${ICON_DL} ${esc(D.lembarUnduh.label)}</a>`);
+    $('#cta').innerHTML = cta.join('');
+    $('#stats').innerHTML = (M.angka || []).map((a) => `<div class="stat"><span>${esc(a.label)}</span><b>${esc(a.nilai)}</b><em>${esc(a.ket || '')}</em></div>`).join('');
+    if (!(M.angka || []).length) $('#stats').hidden = true;
+    $('#specBody').innerHTML = (M.spesifikasi || []).map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('');
+    if (!(M.spesifikasi || []).length) $('.spec').hidden = true;
+    if ((M.perubahan || []).length) {
+      $('#changes').hidden = false;
+      $('#changesList').innerHTML = M.perubahan.map((t) => `<li>${esc(t)}</li>`).join('');
+    }
+    const quick = D.unduhan.filter((u) => u.cepat);
+    if (quick.length) $('#quick').insertAdjacentHTML('beforeend', quick.map((u) =>
+      `<a href="${esc(u.file)}" download><span>${esc(u.nama)}</span><small>${esc(u.tipe)}</small></a>`).join(''));
+    else $('#quick').hidden = true;
+    if (M.catatanUnduhan) $('#dlNote').hidden = false;
+    // sembunyikan bagian kosong
+    const hide = (id) => { const sec = document.getElementById(id); if (sec) sec.hidden = true; const a = $(`.nav a[href="#${id}"]`); if (a) a.hidden = true; };
+    if (!D.sheets.length) hide('gambar');
+    if (!D.laporan.length) hide('laporan');
+    if (!D.visual.length) hide('visual');
   }
 
   /* ------------------------------------------------------------------ filter + grid lembar */
@@ -126,8 +140,8 @@
       title: `${s.no} — ${s.judul}`,
       sub: `${s.disiplin} · lembar ${s.halaman} dari ${s.total} · ${s.ket}`,
       alt: `Lembar ${s.no} ${s.judul}`,
-      download: 'files/gambar-kerja-a3.pdf',
-      downloadLabel: 'Unduh PDF A3 lengkap',
+      download: D.lembarUnduh ? D.lembarUnduh.file : '',
+      downloadLabel: D.lembarUnduh ? D.lembarUnduh.label : '',
     }));
   }
 
@@ -194,6 +208,7 @@
 
   function openPdf(i, opener) {
     const r = D.laporan[i];
+    if (!r) return;
     pdfOpener = opener || document.activeElement;
     $('#pdfTitle').textContent = `${r.kode} — ${r.judul}`;
     $('#pdfSub').textContent = `${r.n} halaman · ${r.ukuran}`;
@@ -228,7 +243,7 @@
 
     const items = () => D.visual.map((v) => ({
       img: v.img, title: v.judul, sub: v.ket, alt: v.judul,
-      download: v.file, downloadLabel: 'Unduh gambar (PNG)',
+      download: v.file, downloadLabel: 'Unduh gambar (' + v.file.split('.').pop().toUpperCase() + ')',
     }));
     const open = (t) => openLb(items(), Number(t.dataset.shot), t);
     grid.addEventListener('click', (e) => { const t = e.target.closest('.shot'); if (t) open(t); });
@@ -280,9 +295,10 @@
       if (i >= 0) setTimeout(() => openLb(sheetItems(), i, null), 60);
       return;
     }
-    const r = /^#laporan-(str|vent|rab)-01$/i.exec(h);
+    const r = /^#laporan-(.+)$/i.exec(h);
     if (r) {
-      const i = D.laporan.findIndex((x) => x.kode.toLowerCase() === (r[1] + '-01').toLowerCase());
+      const slug = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      const i = D.laporan.findIndex((x) => slug(x.kode) === slug(r[1]));
       if (i >= 0) setTimeout(() => openPdf(i, null), 60);
     }
   }
