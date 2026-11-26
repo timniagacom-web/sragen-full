@@ -4,175 +4,94 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>Rangka Baja 3D · Gudang Sragen</title>
+<title>Penyajian 3D · Gudang / Workshop Sragen</title>
 <style>
-  :root{--navy:#0e2642;--biru:#1f5fa8;--garis:#d5e0ea}
+  :root{--navy:#0e2642;--biru:#1f5fa8;--kuning:#f2bd1d;--latar:#eef3f8;--garis:#d5e0ea}
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;overflow:hidden;font-family:"Segoe UI",system-ui,sans-serif;color:var(--navy);background:#dbe9f5}
-  canvas{display:block;touch-action:none}
-  .kotak{position:fixed;background:rgba(255,255,255,.94);border:1px solid var(--garis);border-radius:12px;box-shadow:0 4px 18px rgba(14,38,66,.14)}
-  header{left:12px;top:12px;padding:10px 14px;max-width:calc(100vw - 24px)}
-  header h1{font-size:16px;line-height:1.3}
-  header p{font-size:12.5px;color:#456}
-  #panel{right:12px;top:12px;padding:10px 12px;width:216px;max-height:calc(100vh - 124px);overflow:auto}
-  #panel h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#678;margin:2px 0 4px}
-  label{display:flex;align-items:center;gap:8px;font-size:13.5px;padding:4px 0;cursor:pointer}
-  label i{width:12px;height:12px;border-radius:3px;flex:none}
-  label input{width:16px;height:16px;accent-color:var(--biru)}
-  #tutup{display:none}
-  nav{left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;padding:6px;max-width:calc(100vw - 24px);overflow-x:auto}
-  button{font:600 13px "Segoe UI",system-ui,sans-serif;color:var(--navy);background:#eef4fa;border:1px solid var(--garis);border-radius:8px;padding:8px 12px;cursor:pointer;white-space:nowrap}
-  button[aria-pressed="true"]{background:var(--biru);color:#fff;border-color:var(--biru)}
-  .tanda{position:absolute;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;background:var(--biru);color:#fff;border:2px solid #fff;font:700 12px "Segoe UI",sans-serif;display:grid;place-items:center;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);pointer-events:auto}
-  #tanda{position:fixed;inset:0;pointer-events:none}
-  #info{left:12px;bottom:70px;padding:10px 14px;max-width:min(360px,calc(100vw - 24px));display:none}
-  #info b{display:block;font-size:15px}
-  #info span{font-size:13px;color:#345}
-  #wm{position:fixed;right:12px;bottom:calc(66px + env(safe-area-inset-bottom));font:700 14px "Segoe UI",sans-serif;background:rgba(255,255,255,.75);padding:5px 10px;border-radius:8px;pointer-events:none}
-  #muat{position:fixed;inset:0;display:grid;place-items:center;font-size:15px;pointer-events:none;text-align:center;padding:20px}
-  @media(max-width:720px){
-    header{right:12px}
-    header h1{font-size:14px}
-    #panel{display:none;top:auto;bottom:calc(122px + env(safe-area-inset-bottom));max-height:50vh}
-    #panel.buka{display:block}
-    #tutup{display:inline-block}
-    nav{left:12px;right:12px;transform:none;flex-wrap:wrap;justify-content:center}
-    #wm{bottom:calc(122px + env(safe-area-inset-bottom))}
-    #info{bottom:162px}
-  }
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,sans-serif;color:var(--navy);background:var(--latar);line-height:1.55}
+  header{background:var(--navy);color:#fff;padding:34px 20px 30px;border-bottom:5px solid var(--kuning)}
+  .isi{max-width:1060px;margin:0 auto}
+  header p.atas{font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:#a9c4e4}
+  header h1{font-size:clamp(24px,4.6vw,38px);line-height:1.2;margin:6px 0}
+  header p{color:#d3e2f3;font-size:15px}
+  nav{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--garis);z-index:5;padding:9px 20px}
+  nav .isi{display:flex;gap:8px;flex-wrap:wrap}
+  nav a{font-size:13.5px;font-weight:600;color:var(--navy);text-decoration:none;border:1px solid var(--garis);border-radius:20px;padding:5px 14px}
+  nav a:hover,nav a:focus-visible{background:var(--biru);color:#fff;border-color:var(--biru)}
+  main{padding:26px 20px 10px}
+  section{background:#fff;border:1px solid var(--garis);border-radius:16px;padding:20px;margin-bottom:22px;box-shadow:0 6px 24px rgba(14,38,66,.07);scroll-margin-top:62px}
+  h2{font-size:20px;display:flex;align-items:center;gap:12px;line-height:1.3}
+  h2 b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--biru);color:#fff;display:grid;place-items:center;font-size:16px}
+  section>p{margin:8px 0 14px;font-size:14.5px;color:#34495f}
+  .bingkai{position:relative;border-radius:12px;overflow:hidden;background:#0b1c30;aspect-ratio:16/9}
+  .bingkai video,.bingkai img{width:100%;height:100%;object-fit:contain;display:block}
+  .buka{position:absolute;inset:0;display:grid;place-items:center;text-decoration:none;background:rgba(14,38,66,.22)}
+  .buka span{background:var(--kuning);color:var(--navy);font-weight:700;font-size:clamp(14px,2.4vw,19px);padding:12px 26px;border-radius:30px;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+  ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:4px 22px;margin-top:14px;list-style:none;font-size:13.5px;color:#34495f}
+  li{padding-left:16px;position:relative}
+  li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--kuning);border-radius:2px}
+  footer{padding:6px 20px 34px;font-size:12.5px;color:#5a6f85}
 </style>
-<script type="importmap">
-{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}
-</script>
 </head>
 <body>
-<div id="muat">Memuat model rangka baja…</div>
-<div id="tanda"></div>
-<header class="kotak">
-  <h1>Rangka Baja Gudang / Workshop Sragen</h1>
-  <p>18,00 × 60,00 m · 12 petak @ 5,00 m · kolom ±7,00 m · puncak ±9,00 m</p>
-</header>
-<aside id="panel" class="kotak"><h2>Lapisan</h2><div id="lapisan"></div></aside>
-<div id="info" class="kotak"><b></b><span></span></div>
-<div id="wm">DRAFT · gambarexpress.id</div>
-<nav class="kotak" aria-label="Sudut pandang">
-  <button data-pandang="iso">Isometri</button>
-  <button data-pandang="depan">Depan</button>
-  <button data-pandang="samping">Samping</button>
-  <button data-pandang="atas">Atas</button>
-  <button data-pandang="dalam">Interior</button>
-  <button id="label" aria-pressed="true">Label</button>
-  <button id="tutup" aria-pressed="false">Lapisan</button>
-</nav>
-<script type="module">
-import * as THREE from 'three';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+<header><div class="isi">
+  <p class="atas">Pratinjau draft berwatermark</p>
+  <h1>Gudang / Workshop Sragen</h1>
+  <p>Duyungan, Sidoharjo, Kabupaten Sragen · 18,00 × 60,00 m · 12 petak @ 5,00 m · crane 5 ton</p>
+</div></header>
+<nav><div class="isi">
+  <a href="#interaktif">1 · Model 3D interaktif</a>
+  <a href="#struktur">2 · Video struktur</a>
+  <a href="#suasana">3 · Video suasana</a>
+</div></nav>
+<main><div class="isi">
 
-const LAPISAN = [
-  ['dasar','Pelat dasar & angkur','#2f3b4a',1],['kolom','Kolom WF','#2b74c9',1],['rafter','Kuda-kuda (rafter)','#3a8ade',1],
-  ['gording','Gording','#aebfce',1],['ikatan','Ikatan angin','#d23b2e',1],['strut','Strut bubungan','#c9682b',1],
-  ['pengikat','Pengikat dinding','#3f8f6b',1],['runway','Runway & rel crane','#e0a21b',1],['crane','Crane 5 t','#f2bd1d',1],
-  ['atap','Penutup atap (sisi kiri)','#cfd8de',0],['talang','Talang (sisi kiri)','#77838c',0],['dinding','Dinding (kiri & belakang)','#e6e1d6',0],
-  ['lantai','Lantai','#dcdedc',1]];
-// titik dalam koordinat model: x lebar, y panjang, z tinggi
-const LABEL = [
-  ['kolom','Kolom tepi','WF396×199 / WF350×175',[17.69,45,2.6]],
-  ['kolom','Kolom tengah (as 3–8)','WF346×174×6×9',[9,15,3.2]],
-  ['rafter','Kuda-kuda (rafter)','WF346×174×6×9 · portal crane WF248×124×5×8',[13.5,.2,8.3]],
-  ['gording','Gording','C150×50×20×2,3',[14.85,37.5,8.12]],
-  ['ikatan','Ikatan angin','Pelat 10×80, bidang atap dan dinding',[13,57.5,8.3]],
-  ['strut','Strut bubungan','2C150',[9,42.5,8.7]],
-  ['crane','Crane 5 ton','Overhead single girder, as 3–8',[6,22.5,5.6]],
-  ['runway','Balok runway','WF400, rel P22',[8.3,30,4.9]],
-  ['pengikat','Pengikat dinding','Siku L50×5',[17.75,50,4.9]],
-  ['dasar','Pelat dasar + angkur','Di atas pedestal beton',[17.7,35,.2]]];
-const ke3 = ([x,y,z]) => new THREE.Vector3(x,z,-y);
+<section id="interaktif">
+  <h2><b>1</b>Model 3D interaktif</h2>
+  <p>Seluruh bagian bangunan bisa diputar, diperbesar, dan dinyalakan per lapisan. Ketuk satu bagian untuk melihat namanya.</p>
+  <div class="bingkai">
+    <img src="media/poster-3d.jpg" alt="Model 3D bangunan gudang">
+    <a class="buka" href="3d.html"><span>Buka model 3D</span></a>
+  </div>
+  <ul>
+    <li>Pondasi Revisi 1: telapak, pedestal, batu kali</li>
+    <li>Tulangan, sloof, kolom praktis, ring balok</li>
+    <li>Rangka baja, gording, baut dan angkur</li>
+    <li>Atap, aluminium foil, talang dan pipa hujan</li>
+    <li>Dinding, kisi, pintu, jendela, kanopi</li>
+    <li>Kantor, mushola, pos jaga, halaman</li>
+    <li>Sanitair, air bersih dan kotor, listrik</li>
+    <li>Crane 5 ton dan tata mesin</li>
+  </ul>
+</section>
 
-const muat = document.getElementById('muat');
-const renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-renderer.shadowMap.enabled = false;
-document.body.prepend(renderer.domElement);
-const scene = new THREE.Scene(); scene.background = new THREE.Color('#dbe9f5');
-const camera = new THREE.PerspectiveCamera(35,1,.2,1500);
-const kontrol = new OrbitControls(camera, renderer.domElement);
-kontrol.enableDamping = true; kontrol.maxDistance = 400; kontrol.minDistance = 2; kontrol.maxPolarAngle = Math.PI*.53;
-scene.add(new THREE.HemisphereLight('#ffffff','#8d9482',1.6));
-const matahari = new THREE.DirectionalLight('#ffffff',1.8); matahari.position.set(60,80,30); scene.add(matahari);
-const tanah = new THREE.Mesh(new THREE.PlaneGeometry(900,900), new THREE.MeshLambertMaterial({color:'#cdd8bd'}));
-tanah.rotation.x = -Math.PI/2; tanah.position.set(9,-.3,-30); scene.add(tanah);
+<section id="struktur">
+  <h2><b>2</b>Video render struktur</h2>
+  <p>Urutan terbangunnya gudang, dari pedestal, rangka baja, talang, foil dan atap, dinding, sampai tampak dalam. Bersuara.</p>
+  <div class="bingkai">
+    <video controls playsinline preload="metadata" controlslist="nodownload" oncontextmenu="return false" poster="media/poster-struktur.jpg">
+      <source src="media/video-struktur.mp4?v=3" type="video/mp4">
+    </video>
+  </div>
+</section>
 
-const PANDANG = {
-  iso:{p:[1,.55,.72],t:[9,29,3],r:34}, depan:{p:[0,.12,1],t:[9,0,4.3],r:13},
-  samping:{p:[1,.12,0],t:[9,30,4],r:33}, atas:{p:[.001,1,.001],t:[9,30,0],r:34},
-  dalam:{pos:[6,-6,3.2],t:[8,30,4.2]}};
-let aktif = 'iso', disentuh = false;
-kontrol.addEventListener('start',()=>{disentuh=true;});
-function pandang(nama){
-  aktif = nama; disentuh = false;
-  const v = PANDANG[nama]; const t = ke3(v.t); kontrol.target.copy(t);
-  if(v.pos){camera.position.copy(ke3(v.pos));}
-  else{
-    // jarak mengikuti bentuk layar agar seluruh bangunan terlihat
-    const setengah = THREE.MathUtils.degToRad(camera.fov/2);
-    const jarak = v.r * (innerWidth>720 ? 1.12 : 1) / (Math.tan(setengah) * Math.max(.45,Math.min(camera.aspect,1.5)));
-    camera.position.copy(t).add(new THREE.Vector3(...v.p).normalize().multiplyScalar(jarak));
-  }
-  kontrol.update();
-}
-document.querySelectorAll('[data-pandang]').forEach(b=>b.onclick=()=>pandang(b.dataset.pandang));
+<section id="suasana">
+  <h2><b>3</b>Video suasana (Google Flow)</h2>
+  <p>Gambaran suasana setelah terbangun: eksterior dan interior. Ini visual ilustrasi; ukuran dan detail mengikuti gambar kerja.</p>
+  <div class="bingkai">
+    <video controls playsinline preload="metadata" controlslist="nodownload" oncontextmenu="return false" poster="media/poster-suasana.jpg">
+      <source src="media/video-suasana.mp4?v=3" type="video/mp4">
+    </video>
+  </div>
+</section>
 
-const grup = {}, tampil = {};
-const daftar = document.getElementById('lapisan');
-for(const [id,nama,warna,awal] of LAPISAN){
-  tampil[id] = !!awal;
-  const l = document.createElement('label');
-  l.innerHTML = `<input type="checkbox" ${awal?'checked':''}><i style="background:${warna}"></i>${nama}`;
-  l.querySelector('input').onchange = e=>{tampil[id]=e.target.checked; if(grup[id]) grup[id].visible=tampil[id];};
-  daftar.append(l);
-}
-const info = document.getElementById('info'), wadah = document.getElementById('tanda');
-let pakaiLabel = true;
-const tanda = LABEL.map(([lap,judul,isi,titik],i)=>{
-  const el = document.createElement('button'); el.className='tanda'; el.textContent=i+1; el.setAttribute('aria-label',judul);
-  el.onclick = ()=>{info.style.display='block'; info.querySelector('b').textContent=`${i+1}. ${judul}`; info.querySelector('span').textContent=isi;};
-  wadah.append(el); return {el,lap,v:ke3(titik)};
-});
-document.getElementById('label').onclick = e=>{pakaiLabel=!pakaiLabel; e.target.setAttribute('aria-pressed',pakaiLabel); if(!pakaiLabel) info.style.display='none';};
-document.getElementById('tutup').onclick = e=>{const b=document.getElementById('panel').classList.toggle('buka'); e.target.setAttribute('aria-pressed',b);};
-renderer.domElement.addEventListener('pointerdown',()=>{info.style.display='none';});
-
-new GLTFLoader().load('rangka.glb', gltf=>{
-  gltf.scene.traverse(o=>{if(o.isMesh){o.material.side=THREE.DoubleSide; o.material.metalness=Math.min(o.material.metalness,.25); if(/lantai|alas/.test(o.material.name)) o.material.color.set('#aeb4b4');}});
-  for(const anak of [...gltf.scene.children]){
-    const id = anak.name.split(/[._]/)[0];
-    if(id==='alas'){continue;}
-    grup[id]=anak; anak.visible=tampil[id]??true;
-  }
-  scene.add(gltf.scene); muat.remove(); window.siap = Object.keys(grup);
-}, e=>{if(e.total) muat.textContent=`Memuat model rangka baja… ${Math.round(e.loaded/e.total*100)}%`;},
-   ()=>{muat.textContent='Model gagal dimuat. Muat ulang halaman ini.';});
-
-// ukuran bisa 0 saat halaman dimuat di tab tersembunyi
-function ukur(){const w=innerWidth||1280,h=innerHeight||720; renderer.setSize(w,h); camera.aspect=w/h; if(w>720) camera.setViewOffset(w,h,105,0,w,h); else camera.clearViewOffset(); camera.updateProjectionMatrix(); if(!disentuh) pandang(aktif);}
-addEventListener('resize',ukur); ukur(); window.__kamera = ()=>[camera.position.toArray().map(Math.round), kontrol.target.toArray().map(Math.round), camera.aspect.toFixed(2), aktif, disentuh];
-const p = new THREE.Vector3();
-// gambar ulang hanya saat ada perubahan agar hemat baterai HP
-let lalu = '';
-renderer.setAnimationLoop(()=>{
-  kontrol.update();
-  camera.updateMatrixWorld();
-  const kunci = camera.matrixWorld.elements.map(v=>v.toFixed(4)).join() + camera.aspect + pakaiLabel + Object.values(tampil).join() + Object.keys(grup).length;
-  if(kunci===lalu) return; lalu = kunci;
-  renderer.render(scene,camera);
-  for(const t of tanda){
-    p.copy(t.v).project(camera);
-    const ada = pakaiLabel && tampil[t.lap] && p.z<1 && Math.abs(p.x)<1 && Math.abs(p.y)<1;
-    t.el.style.display = ada?'grid':'none';
-    if(ada){t.el.style.left=(p.x+1)/2*innerWidth+'px'; t.el.style.top=(1-p.y)/2*innerHeight+'px';}
-  }
-});
+</div></main>
+<footer><div class="isi">Dokumen pratinjau untuk dibahas bersama pemilik. Bukan gambar untuk konstruksi. DRAFT · gambarexpress.id</div></footer>
+<script>
+  // hanya satu video yang diputar pada satu waktu
+  const video = [...document.querySelectorAll('video')];
+  video.forEach(v=>v.addEventListener('play',()=>video.forEach(x=>{if(x!==v) x.pause();})));
 </script>
 </body>
 </html>
