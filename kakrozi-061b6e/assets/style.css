@@ -291,3 +291,21 @@ footer .stamp{font-size:.78rem; color:#98a2b3; text-align:right}
   section{break-inside:avoid; padding:1rem 0}
   a[href]::after{content:""}
 }
+
+/* ================================ fasad di awal ================================ */
+.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); align-items:center; row-gap:1.6rem;
+  padding:clamp(1.6rem,3vw,2.6rem) 0}
+.hero-shot{display:block; width:100%; padding:0; border:1px solid rgba(255,255,255,.18); border-radius:var(--r-lg);
+  overflow:hidden; background:var(--deep-2); cursor:zoom-in; box-shadow:0 24px 60px -20px rgba(0,0,0,.65)}
+.hero-shot img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover}
+.hero .status{grid-column:1/-1; display:flex; flex-wrap:wrap; align-items:center; gap:.4rem 1.2rem; padding:.9rem 1.25rem}
+.hero .status .val{font-size:1.15rem; margin:0}
+.hero .status .note{margin:0}
+section.hero{padding:0}
+.hero .status ul{display:flex; flex-wrap:wrap; gap:.4rem 1.6rem; margin:0 0 0 auto; padding:0; border:0}
+.hero .status li{gap:.5rem}
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr; padding-top:1rem}
+  .hero-shot{order:-1}
+  .hero .status ul{margin-left:0; width:100%}
+}

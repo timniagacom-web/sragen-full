@@ -246,6 +246,8 @@
       download: v.file, downloadLabel: 'Unduh gambar (' + v.file.split('.').pop().toUpperCase() + ')',
     }));
     const open = (t) => openLb(items(), Number(t.dataset.shot), t);
+    const hero = $('#heroShot');
+    if (hero) hero.addEventListener('click', () => openLb(items(), 0, hero));
     grid.addEventListener('click', (e) => { const t = e.target.closest('.shot'); if (t) open(t); });
     grid.addEventListener('keydown', (e) => {
       if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('shot')) { e.preventDefault(); open(e.target); }
