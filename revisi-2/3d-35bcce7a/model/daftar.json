@@ -1,0 +1,314 @@
+[
+ {
+  "id": "urugan",
+  "nama": "Urugan galian dan timbunan",
+  "warna": "#c9a66b",
+  "tahap": 1,
+  "segitiga": 36,
+  "kb": 2
+ },
+ {
+  "id": "lantaikerja",
+  "nama": "Lantai kerja",
+  "warna": "#d3cdbb",
+  "tahap": 1,
+  "segitiga": 432,
+  "kb": 8
+ },
+ {
+  "id": "telapak",
+  "nama": "Telapak (cakar ayam)",
+  "warna": "#a39a88",
+  "tahap": 1,
+  "segitiga": 432,
+  "kb": 8
+ },
+ {
+  "id": "pedestal",
+  "nama": "Pedestal",
+  "warna": "#85735a",
+  "tahap": 1,
+  "segitiga": 504,
+  "kb": 10
+ },
+ {
+  "id": "besi1",
+  "nama": "Tulangan pondasi, stek dan dowel",
+  "warna": "#d9481f",
+  "tahap": 1,
+  "segitiga": 67936,
+  "kb": 1269
+ },
+ {
+  "id": "angkur",
+  "nama": "Angkur pondasi crane",
+  "warna": "#2f5fb0",
+  "tahap": 1,
+  "segitiga": 4224,
+  "kb": 69
+ },
+ {
+  "id": "batukali",
+  "nama": "Pondasi batu kali",
+  "warna": "#77726a",
+  "tahap": 1,
+  "segitiga": 168,
+  "kb": 4
+ },
+ {
+  "id": "sloof",
+  "nama": "Sloof",
+  "warna": "#9a968c",
+  "tahap": 1,
+  "segitiga": 48,
+  "kb": 2
+ },
+ {
+  "id": "drainase",
+  "nama": "Drainase bawah lantai",
+  "warna": "#ee7322",
+  "tahap": 2,
+  "segitiga": 288,
+  "kb": 6
+ },
+ {
+  "id": "agregat",
+  "nama": "Lapis agregat",
+  "warna": "#b39b72",
+  "tahap": 2,
+  "segitiga": 12,
+  "kb": 1
+ },
+ {
+  "id": "besi2",
+  "nama": "Tulangan lantai, kolom dan balok",
+  "warna": "#d9481f",
+  "tahap": 2,
+  "segitiga": 84816,
+  "kb": 1658
+ },
+ {
+  "id": "lantai",
+  "nama": "Lantai gudang 20 cm",
+  "warna": "#c3c6c5",
+  "tahap": 2,
+  "segitiga": 840,
+  "kb": 15
+ },
+ {
+  "id": "jalan",
+  "nama": "Cor jalan truk",
+  "warna": "#b4b6b3",
+  "tahap": 2,
+  "segitiga": 12,
+  "kb": 1
+ },
+ {
+  "id": "kolom",
+  "nama": "Kolom beton",
+  "warna": "#8f9aa3",
+  "tahap": 2,
+  "segitiga": 360,
+  "kb": 7
+ },
+ {
+  "id": "balok",
+  "nama": "Balok kepala kolom dan lintel",
+  "warna": "#7e8a94",
+  "tahap": 2,
+  "segitiga": 36,
+  "kb": 2
+ },
+ {
+  "id": "dinding",
+  "nama": "Dinding bata",
+  "warna": "#ece6d8",
+  "tahap": 2,
+  "segitiga": 1476,
+  "kb": 26
+ },
+ {
+  "id": "praktis",
+  "nama": "Ring balok dan kolom praktis",
+  "warna": "#a8a398",
+  "tahap": 2,
+  "segitiga": 552,
+  "kb": 10
+ },
+ {
+  "id": "kisi",
+  "nama": "Kisi ventilasi dan kasa",
+  "warna": "#5f6e79",
+  "tahap": 2,
+  "segitiga": 7392,
+  "kb": 124
+ },
+ {
+  "id": "pintu",
+  "nama": "Pintu gudang",
+  "warna": "#6f8ba3",
+  "tahap": 2,
+  "segitiga": 312,
+  "kb": 6
+ },
+ {
+  "id": "baja",
+  "nama": "Rangka atap baja (rafter)",
+  "warna": "#2b74c9",
+  "tahap": 3,
+  "segitiga": 2744,
+  "kb": 47
+ },
+ {
+  "id": "gording",
+  "nama": "Gording",
+  "warna": "#aebfce",
+  "tahap": 3,
+  "segitiga": 15048,
+  "kb": 245
+ },
+ {
+  "id": "ikatan",
+  "nama": "Jarum gording dan ikatan angin",
+  "warna": "#d23b2e",
+  "tahap": 3,
+  "segitiga": 5832,
+  "kb": 97
+ },
+ {
+  "id": "gevel",
+  "nama": "Dinding atas (gevel)",
+  "warna": "#e4dccb",
+  "tahap": 3,
+  "segitiga": 48,
+  "kb": 2
+ },
+ {
+  "id": "talang",
+  "nama": "Talang",
+  "warna": "#66757f",
+  "tahap": 3,
+  "segitiga": 480,
+  "kb": 9
+ },
+ {
+  "id": "pipa",
+  "nama": "Pipa air hujan",
+  "warna": "#e8691c",
+  "tahap": 3,
+  "segitiga": 2560,
+  "kb": 42
+ },
+ {
+  "id": "foil",
+  "nama": "Aluminium foil",
+  "warna": "#f4f6f8",
+  "tahap": 3,
+  "segitiga": 5232,
+  "kb": 90
+ },
+ {
+  "id": "atap",
+  "nama": "Atap galvalum",
+  "warna": "#9db3c3",
+  "tahap": 3,
+  "segitiga": 8012,
+  "kb": 158
+ },
+ {
+  "id": "kanopi",
+  "nama": "Kanopi hollow",
+  "warna": "#7f8f9c",
+  "tahap": 3,
+  "segitiga": 366,
+  "kb": 7
+ },
+ {
+  "id": "kantor",
+  "nama": "Struktur kantor",
+  "warna": "#9a968c",
+  "tahap": 4,
+  "segitiga": 96,
+  "kb": 3
+ },
+ {
+  "id": "besi4",
+  "nama": "Tulangan kantor",
+  "warna": "#a8402a",
+  "tahap": 4,
+  "segitiga": 10752,
+  "kb": 200
+ },
+ {
+  "id": "penunjang",
+  "nama": "Kantor, mushola, toilet, pos jaga",
+  "warna": "#e3d6bd",
+  "tahap": 4,
+  "segitiga": 1680,
+  "kb": 29
+ },
+ {
+  "id": "atappen",
+  "nama": "Atap bangunan penunjang",
+  "warna": "#a8412f",
+  "tahap": 4,
+  "segitiga": 6056,
+  "kb": 97
+ },
+ {
+  "id": "finishing",
+  "nama": "Keramik dan plafon",
+  "warna": "#dfe3e0",
+  "tahap": 4,
+  "segitiga": 312,
+  "kb": 6
+ },
+ {
+  "id": "sanitair",
+  "nama": "Sanitair dan air",
+  "warna": "#2f9fd0",
+  "tahap": 4,
+  "segitiga": 2144,
+  "kb": 36
+ },
+ {
+  "id": "halaman",
+  "nama": "Paving halaman",
+  "warna": "#8e9496",
+  "tahap": 4,
+  "segitiga": 24,
+  "kb": 1
+ },
+ {
+  "id": "pagar",
+  "nama": "Pagar dan portal",
+  "warna": "#d4c9b0",
+  "tahap": 4,
+  "segitiga": 72,
+  "kb": 2
+ },
+ {
+  "id": "crane",
+  "nama": "Crane 5 t dan runway",
+  "warna": "#f2bd1d",
+  "tahap": 5,
+  "segitiga": 7676,
+  "kb": 124
+ },
+ {
+  "id": "kantor2",
+  "nama": "Kantor lantai 2",
+  "warna": "#9b7bb8",
+  "tahap": 5,
+  "segitiga": 3248,
+  "kb": 53
+ },
+ {
+  "id": "mesin",
+  "nama": "Tata mesin (studi)",
+  "warna": "#3f8f6b",
+  "tahap": 0,
+  "segitiga": 72,
+  "kb": 2
+ }
+]
